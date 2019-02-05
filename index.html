@@ -7,18 +7,23 @@ title: i am a Designer
 <div class="cover">
   <header>
     <div class="profile_container profile__head">
-      <h3> Das Krishnan</h3>
-      <p> I'm a web designer / developer based in Toronto, Canada. I have a passion for web design and love to create
-        for web and mobile devices. </p>
+      <h1> Das Krishnan</h1>
+      <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic, consequuntur qui, sed optio aliquid, odit
+        dolor adipisci porro repudiandae quisquam cumque unde natus autem eaque temporibus veniam aut officiis alias.
+      </p>
     </div>
   </header>
 
 
+
+
+
+
   <div class="portfolio_wrapper">
 
-    <ul>
+    <ul id="example1">
       {% for portfolio in site.portfolio %}
-      <li>
+      <li class="item">
         <img src="{{site.baseurl}}/images/{{portfolio.thumb-img}}.jpg" alt="">
         <a href="{{ portfolio.url }}"></a>
       </li>

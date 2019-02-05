@@ -1,53 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <title>{{ page.title }}</title>
 
-    <!-- <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet"> -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Muli:200,300,400,600,700,800,900"
-      rel="stylesheet"
-    />
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>{{ page.title }}</title>
 
-    <!-- Bootstrap and Default -->
-    <link
-      rel="stylesheet"
-      href="{{ site.baseurl }}/plugins/uikit/uikit.min.css"
-    />
-    <link rel="stylesheet" href="{{ site.baseurl }}/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="{{ site.baseurl }}/css/style.css" />
-    <link
-      rel="icon"
-      sizes="192x192"
-      href="{{ site.baseurl }}/images/fav-icon.png"
-    />
-  </head>
+  <!-- Bootstrap and Default -->
+  <link rel="stylesheet" href="{{ site.baseurl }}/plugins/uikit/uikit.min.css" />
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/style.css" />
+  <link rel="icon" sizes="192x192" href="{{ site.baseurl }}/images/fav-icon.png" />
 
-  <body>
-    <div class="container-fuild sticky-header">
-      <div class="header">
-        <div class="container">
-          <a href="/"> <div class="logo">Das Krishnan</div> </a>
-        </div>
+</head>
+
+<body>
+  <div class="container-fuild sticky-header">
+    <div class="header">
+      <div class="container">
+        <a href="/">
+          <div class="logo">Das Krishnan</div>
+        </a>
       </div>
     </div>
+  </div>
 
-    {{ content }}
+  {{ content }}
+  <script src="{{ site.baseurl }}/js/bootstrap.min.js"></script>
+  <script src="https://getuikit.com/v2/vendor/jquery.js"></script>
+  <script type="text/javascript" src="{{ site.baseurl }}/js/demo.js"></script>
+  <link rel="stylesheet" href="{{ site.baseurl }}/plugins/uikit/uikit.min.js" />
+</body>
 
-    <!-- jQuery first, then Tether, then Bootstrap JS. -->
-
-    <script src="{{ site.baseurl }}/js/bootstrap.min.js"></script>
-    <script src="https://getuikit.com/v2/vendor/jquery.js"></script>
-    <script type="text/javascript" src="{{ site.baseurl }}/js/demo.js"></script>
-    <link
-      rel="stylesheet"
-      href="{{ site.baseurl }}/plugins/uikit/uikit.min.js"
-    />
-  </body>
 </html>

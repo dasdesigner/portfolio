@@ -1,17 +1,22 @@
 
 
 body{
-  font-family: 'K2D', sans-serif;
+  // font-family: 'K2D', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff;
 }
 
 header{
   padding-top: $head-space-h;
   padding-bottom: $head-space-h;
+  // background-image: linear-gradient( 135deg, #FFF6B7 10%, #F6416C 100%);
+  background-color: #fff;
 }
 
 
 .portfolio_wrapper{
   min-height: 50vh;
+  margin-bottom: 100px;
   ul{
     margin: 0;
     padding: 0;
@@ -20,7 +25,7 @@ header{
     text-align: center;
     li{
       display: inline-block;
-      width: calc(100% / 4 );
+      width: 100%;
       background-color: #ccc;
       font-size: 14px;
       color: #333;
@@ -43,17 +48,44 @@ header{
 }
  
 body{
-  background-color: #F7F7F7;
+  background-color: #fff;
 }
 
 .cover{
-  margin: 50px;
-  background-color: #ECECEC;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 
 .profile__head{
-  h1,h2,h4,h5,h6,h3{
 
+  
+  h1,h2,h4,h5,h6,h3{
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  h1{
+    font-size: 40px;
+    position: relative;
+    z-index: 0;
+    &:after{
+    content: "Das Designer";
+    font-size: 120px;
+    position: absolute;
+    left: -40px;
+    top: -50px;
+    bottom: 0;
+    margin: auto;
+    pointer-events: none;
+    opacity: .05;
+    color: #000;
+    z-index: -1;
+    font-weight: 800;
+    }
+  }
+  p{
+    margin-bottom: 0;
+    max-width: 50%;
+    position: relative;
   }
 }
