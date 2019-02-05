@@ -1,0 +1,7 @@
+@mixin translate( $valu1 , $valu2) {
+  -webkit-transform: translate($valu1, $valu2);
+  -moz-transform: translate($valu1, $valu2);
+  -o-transform: translate($valu1, $valu2);
+  -ms-transform: translate($valu1, $valu2);
+  transform: translate($valu1, $valu2);  
+}

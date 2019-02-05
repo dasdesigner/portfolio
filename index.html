@@ -1,0 +1,29 @@
+---
+layout: bone
+alt: Weserve Online Delivery
+title: i am a Designer
+---
+
+<div class="cover">
+  <header>
+    <div class="profile_container profile__head">
+      <h3> Das Krishnan</h3>
+      <p> I'm a web designer / developer based in Toronto, Canada. I have a passion for web design and love to create
+        for web and mobile devices. </p>
+    </div>
+  </header>
+
+
+  <div class="portfolio_wrapper">
+
+    <ul>
+      {% for portfolio in site.portfolio %}
+      <li>
+        <img src="{{site.baseurl}}/images/{{portfolio.thumb-img}}.jpg" alt="">
+        <a href="{{ portfolio.url }}"></a>
+      </li>
+      {% endfor %}
+    </ul>
+
+  </div>
+</div>

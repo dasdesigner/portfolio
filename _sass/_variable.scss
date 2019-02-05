@@ -1,0 +1,45 @@
+$primary: #ED1C24;
+$success: #4F4C6A;
+$white: #fff;
+$black: #000;
+
+$homepage-gray: #F1F1E4;
+
+
+$head-space-h: 150px;
+$head-space-v: 150px;
+
+
+@import url('https://fonts.googleapis.com/css?family=K2D:400,500,600,700,800');
+
+@mixin transition($valu) {
+  -webkit-transition: all $valu ease-in;
+-moz-transition: all $valu ease-in;
+-o-transition: all $valu ease-in;
+transition: all $valu ease-in;
+}
+
+@mixin default-font {
+  font-family: 'Muli', sans-serif;
+}
+
+
+.btn{
+  border-width: 2px;
+}
+.btn-primary{
+  background: $primary;
+  border-color:$white;
+  &:hover{
+    background: darken($primary, 10%);
+    border-color:$white;
+  }
+}
+.btn-success{
+  background: $success;
+  border-color:$white;
+  &:hover{
+    background: darken($success, 10%);
+    border-color:$white;
+  }
+}

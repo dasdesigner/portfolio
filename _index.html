@@ -1,0 +1,49 @@
+---
+layout: default
+alt: Weserve Online Delivery
+title: Template  :)
+---
+
+
+<div class="container-fuild section">
+	<div class="banner">
+		<div class="container">
+		 <div class="row align-items-center justify-content-center">
+		 	<div class="col-md-8">
+		 		<div class="title-home">
+		 			<h1> I'm a web designer / developer </h1>
+ 					<h3>  based in Toronto, Canada. I have a passion for web design and love to create for web and mobile devices. </h3>
+		 		</div>
+		 	</div>
+		 </div>
+	</div>
+	</div>
+</div>
+
+<div class="container-fuild" id="grid">
+	<div class="container-full">
+		<div class="flex">
+		{% for portfolio in site.portfolio %}
+			<div class="item_list_card">
+				<img src="images/{{portfolio.thumb-img}}.jpg" alt="">
+				<div class="caption">
+					<h3 class="mb5"> {{ portfolio.name }}</h3> 
+					<p class="m0"> {{ portfolio.subname }} </p>
+				</div>
+				<a href="{{ portfolio.url }}"></a>
+			</div>
+		{% endfor %}
+
+		</div>
+	</div>
+</div>
+
+<div class="container-fuild" id="grid">
+	<div class="container">
+		<div class="row">
+		
+ 
+
+		</div>
+	</div>
+</div>

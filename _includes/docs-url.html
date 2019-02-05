@@ -1,0 +1,8 @@
+<ul class="{{ include.link_id }} docs-nav">
+  <li class="home"> <a href="index.html"> Home </a></li>
+  {% for docs in site.docs %}
+  <li>
+    <a {% if docs.url == page.url %}class="active"{% endif %} href="{{ docs.url }}"> {{ docs.title }} </a>
+  </li>
+  {% endfor %}
+</ul>
