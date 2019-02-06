@@ -23,7 +23,7 @@ title: My Portfolio - Das krishnan
       {% for portfolio in site.portfolio %}
       <li class="item">
         <img src="{{site.baseurl}}/images/{{portfolio.thumb-img}}.jpg" alt="">
-        <a href="{{ portfolio.url }}"></a>
+        <a href="{{site.baseurl}}{{ portfolio.url }}"></a>
         <div class="overlay"></div>
       </li>
       {% endfor %}
