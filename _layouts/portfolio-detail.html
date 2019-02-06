@@ -1,58 +1,62 @@
 ---
-layout: default
+layout: bone
 ---
 
- 
- 
+
+
+
+
 
 <div class="container-fuild mt100">
-	<div class="container">
-		
-		<div class="portfolio_page_header">
+  <div class="container">
+    <div class="goto-back-centertop">
+      <a href="{{ site.baseurl }}/index.html"> <i class="fa fa-th-large"> </i> <span> back to home </span></a>
+    </div>
+    <div class="portfolio_page_header">
       <div class="main_tag"> {{ page.subname }} </div>
       <h1> {{ page.name }} </h1>
-      <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, blanditiis deserunt.  </p>
+      <p> {{ page.description }} </p>
     </div>
-  
+
   </div>
-  
-  <div class="container wide-container portfolio_wide_container">
+
+  <div class="container footer-space">
     {{ content }}
   </div>
 
-  <div class="container wide-container">
+  <!-- <div class="container wide-container">
     <div class="PageNavigation">
       {% if page.previous.url %}
-        <div class="nav_box">
-          <div class="img" style="background-image: url({{site.baseurl}}/images/{{ page.previous.thumb-img }}.jpg)"> </div>
-          <div class="inner">
-            <div class="tag"> Previous </div>
-            <h4> {{page.previous.title}}  </h4>
-            <p> {{page.previous.subname}} </p>
-          </div>
-          <a href="{{page.previous.url}}"></a>
+      <div class="nav_box">
+        <div class="img" style="background-image: url({{site.baseurl}}/images/{{ page.previous.thumb-img }}.jpg)">
         </div>
-      {% endif %}  
-        <div class="nav_box home">
-          <div class="inner">
-            <h4>  go to back </h4>
-            <p> www.daskrishnan.in  </p>
-          </div>
-          <a href="{{ site.baseurl }}/index.html" ></a>
+        <div class="inner">
+          <div class="tag"> Previous </div>
+          <h4> {{page.previous.title}} </h4>
+          <p> {{page.previous.subname}} </p>
         </div>
+        <a href="{{page.previous.url}}"></a>
+      </div>
+      {% endif %}
+      <div class="nav_box home">
+        <div class="inner">
+          <h4> go to back </h4>
+          <p> www.daskrishnan.in </p>
+        </div>
+        <a href="{{ site.baseurl }}/index.html"></a>
+      </div>
       {% if page.next.url %}
-        <div class="nav_box">
-          <div class="img" style="background-image:url({{site.baseurl}}/images/{{ page.next.thumb-img }}.jpg)"> </div>
-          <div class="inner">
-            <div class="tag"> Next </div>
-            <h4> {{page.next.title}} </h4>
-            <p> {{page.next.subname}} </p>
-          </div>
-          <a href="{{page.next.url}}"></a>
+      <div class="nav_box">
+        <div class="img" style="background-image:url({{site.baseurl}}/images/{{ page.next.thumb-img }}.jpg)"> </div>
+        <div class="inner">
+          <div class="tag"> Next </div>
+          <h4> {{page.next.title}} </h4>
+          <p> {{page.next.subname}} </p>
         </div>
+        <a href="{{page.next.url}}"></a>
+      </div>
       {% endif %}
     </div>
-  </div>
+  </div> -->
 
 </div>
- 
