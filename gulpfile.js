@@ -1,98 +1,19 @@
-var gulp = require("gulp"),
-  sass = require("gulp-ruby-sass"),
-  autoprefixer = require("gulp-autoprefixer"),
-  minifycss = require("gulp-minify-css"),
-  browserSync = require("browser-sync"),
-  critical = require("critical"),
-  cp = require("child_process");
+var gulp = require('gulp');
+var shell = require('gulp-shell');
+var browserSync = require('browser-sync').create();
 
-gulp.task("css", function() {
-  return sass("src/scss/style.scss", { style: "expanded" })
-    .pipe(plumber())
-    .pipe(autoprefixer("last 2 version", "ie 9"))
-    .pipe(gulp.dest("css"))
-    .pipe(rename({ suffix: ".min" }))
-    .pipe(minifycss())
-    .pipe(gulp.dest("css"))
-    .pipe(gulp.dest("_site/css"))
-    .pipe(browserSync.reload({ stream: true }))
-    .pipe(notify({ message: "Styles task complete" }));
+// Task for building blog when something changed:
+gulp.task('build', shell.task(['bundle exec jekyll serve']));
+// Or if you don't use bundle:
+// gulp.task('build', shell.task(['jekyll build --watch']));
+
+// Task for serving blog with Browsersync
+gulp.task('serve', function () {
+    browserSync.init({server: {baseDir: '_site/'}});
+    // Reloads page when some of the already built files changed:
+    gulp.watch('_site/**/*.*').on('change', browserSync.reload);
 });
 
-gulp.task("js", function() {
-  return gulp
-    .src("src/js/scripts.js")
-    .pipe(jshint())
-    .pipe(jshint.reporter("default"))
-    .pipe(concat("scripts.js"))
-    .pipe(gulp.dest("js"))
-    .pipe(rename({ suffix: ".min" }))
-    .pipe(uglify())
-    .pipe(gulp.dest("js"))
-    .pipe(gulp.dest("_site/js"))
-    .pipe(notify({ message: "Scripts task complete" }));
-});
+// gulp.task('default', ['build', 'serve']);
 
-gulp.task("clean", function() {
-  return gulp.src(["css", "js"], { read: false }).pipe(clean());
-});
-
-gulp.task("critical-css", function() {
-  critical.generate({
-    // Your base directory
-    base: "_site/",
-    // HTML source file
-    src: "index.html",
-    // CSS output file
-    dest: "css/critical.min.css",
-    // Viewport width
-    width: 1200,
-    // Viewport height
-    height: 900,
-    // Minify critical-path CSS
-    minify: true
-  });
-});
-
-/**
- * Build the Jekyll Site
- */
-gulp.task("jekyll-build", function(done) {
-  browserSync.notify("Building Jekyll");
-  return cp.spawn("jekyll", ["build"], { stdio: "inherit" }).on("close", done);
-});
-
-/**
- * Rebuild Jekyll & do page reload
- */
-gulp.task("jekyll-rebuild", ["jekyll-build"], function() {
-  browserSync.reload();
-});
-
-/**
- * Wait for jekyll-build, then launch the Server
- */
-gulp.task("browser-sync", ["jekyll-build"], function() {
-  browserSync({
-    server: {
-      baseDir: "_site"
-    },
-    host: "localhost"
-  });
-});
-
-gulp.task("watch", function() {
-  // Watch .scss files
-  gulp.watch("src/scss/**/*.scss", ["css"]);
-  // Watch .js files
-  gulp.watch("src/js/**/*.js", ["js"]);
-  // Watch .html files and posts
-  gulp.watch(
-    ["index.html", "_includes/*.html", "_layouts/*.html", "*.md", "_posts/*"],
-    ["jekyll-rebuild"]
-  );
-});
-
-gulp.task("default", ["clean"], function() {
-  gulp.start("css", "js", "browser-sync", "watch");
-});
+gulp.task('default', gulp.series('build', 'serve'));
