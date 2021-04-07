@@ -10,17 +10,20 @@
   <link rel="stylesheet" href="{{site.baseurl}}/css/dasdesigner.css">
 </head>
 
-<body>
+<body class="screen">
   {{content}}
 </body>
 
+
 <script src="{{ site.baseurl }}/js/jquery.js"></script>
-<script src="{{ site.baseurl }}/js/bootstrap.js"></script>
+<script src="{{ site.baseurl }}/js/bootstrap.min.js"></script>
 <script src="{{ site.baseurl }}/js/jquery.grid-a-licious.js"></script>
+<script src="{{ site.baseurl }}/js/script.js"></script>
+
 <script>
   $("#example1").gridalicious({
-    width: 300,
-    gutter: 3
+    width: 500,
+    gutter: 15
   });
 </script>
 

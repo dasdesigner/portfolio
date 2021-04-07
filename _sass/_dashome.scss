@@ -29,7 +29,7 @@ header{
       background-color: #ccc;
       font-size: 14px;
       color: #333;
-      position: relative;
+      position: relative; 
       overflow: hidden;
       
       a{
@@ -40,7 +40,7 @@ header{
         max-width: 100%;
       }
     }
-  }
+  } 
 }
 
 
@@ -71,7 +71,7 @@ body{
     position: relative;
     z-index: 0;
     &:after{
-    content: "Das Designer";
+    content: "Lorem ipsum ";
     font-size: 120px;
     position: absolute;
     left: -40px;
