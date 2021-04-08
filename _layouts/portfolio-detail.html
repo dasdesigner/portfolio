@@ -27,7 +27,7 @@ layout: bone
         <div class="img" style="background-image: url({{site.baseurl}}/images/{{ page.previous.thumb-img }}.jpg)">
         </div>
         <div class="inner">
-          <a href="{{page.previous.url}}">
+          <a href="{{ site.baseurl }}/{{page.previous.url}}">
             <div class="tag"> Previous </div>
             <h4> {{page.previous.title}} </h4>
             <p> {{page.previous.subname}} </p>
@@ -46,7 +46,7 @@ layout: bone
       <div class="nav_box next">
         <div class="img" style="background-image:url({{site.baseurl}}/images/{{ page.next.thumb-img }}.jpg)"> </div>
         <div class="inner">
-          <a href="{{page.next.url}}">
+          <a href="{{ site.baseurl }}/{{page.next.url}}">
             <div class="tag"> Next </div>
             <h4> {{page.next.title}} </h4>
             <p> {{page.next.subname}} </p>
