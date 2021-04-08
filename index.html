@@ -12,15 +12,16 @@ alt: Weserve Online Delivery
       </p>
     </div> 
   </header>
-
+</div>
 
 
   <div class="portfolio_wrapper">
 
+    {% assign doclist = site.work | sort: 'date' %}
     <ul id="example1">
-      {% for portfolio in site.work %}
+      {% for portfolio in doclist %}
       <li class="item">
-        <img src="{{site.baseurl}}/images/{{portfolio.thumb-img}}.jpg" alt="">
+        <img src="{{site.baseurl}}/images/thumb/{{portfolio.thumb-img}}.jpg" alt="">
         <a href="{{site.baseurl}}{{ portfolio.url }}"></a>
         <div class="overlay"></div>
       </li>
@@ -28,4 +29,6 @@ alt: Weserve Online Delivery
     </ul>
 
   </div>
-</div>
+
+
+  <!-- https://www.dejan.works/ -->
