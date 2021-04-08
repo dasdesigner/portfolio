@@ -19,7 +19,7 @@ collections:
     output: true
   portfolio:
     output: true
-    baseurl: portfolio/
+    baseurl: 
     
     
 baseurl:
