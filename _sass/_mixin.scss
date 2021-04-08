@@ -1,9 +1,117 @@
-@mixin translate( $valu1 , $valu2) {
-  -webkit-transform: translate($valu1, $valu2);
-  -moz-transform: translate($valu1, $valu2);
-  -o-transform: translate($valu1, $valu2);
-  -ms-transform: translate($valu1, $valu2);
-  transform: translate($valu1, $valu2);  
+@mixin transition($valu) {
+  -webkit-transition: $valu;
+  -moz-transition: $valu;
+  -o-transition: $valu;
+  transition: $valu;
+}
+
+@mixin translate($valu, $valu2) {
+  -webkit-transform: translate($valu, $valu2);
+  -moz-transform: translate($valu, $valu2);
+  -o-transform: translate($valu, $valu2);
+  -ms-transform: translate($valu, $valu2);
+  transform: translate($valu, $valu2);
+}
+
+@mixin translatewithrotate($valu, $valu2, $valu3 ) {
+  -webkit-transform: translate($valu, $valu2) rotate(#{$valu3}deg);
+  -moz-transform: translate($valu, $valu2) rotate(#{$valu3}deg);
+  -o-transform: translate($valu, $valu2) rotate(#{$valu3}deg);
+  -ms-transform: translate($valu, $valu2) rotate(#{$valu3}deg);
+  transform: translate($valu, $valu2) rotate(#{$valu3}deg);
+}
+
+
+@mixin transform($valu) {
+  -webkit-transform: $valu;
+  -moz-transform: $valu;
+  -o-transform: $valu;
+  -ms-transform: $valu;
+  transform: $valu;
+}
+
+
+@mixin placeholder($color) {
+  ::-webkit-input-placeholder {
+    color: $color;
+  }
+  ::-moz-placeholder {
+    color: $color;
+  }
+  :-ms-input-placeholder {
+    color: $color;
+  }
+  :-moz-placeholder {
+    color: $color;
+  }
+}
+
+@mixin scale($valu) {
+  -webkit-transform: scale($valu);
+  -moz-transform: scale($valu);
+  -o-transform: scale($valu);
+  -ms-transform: scale($valu);
+  transform: scale($valu);
+}
+
+ 
+
+@mixin gradient-style1($color1, $color2) {
+  background: $color1; /* Old browsers */
+  background: -moz-linear-gradient(top, $color1 1%, $color2 50%, $color1 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, $color1 1%, $color2 50%, $color1 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    $color1 1%,
+    $color2 50%,
+    $color1 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$color1}', endColorstr='#{$color2}',GradientType=0 );
+}
+
+@mixin gradient-style2($color1, $color2) {
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#fefcea+0,f1da36+100;Gold+3D */
+  background: $color1; /* Old browsers */
+  background: -moz-linear-gradient(-45deg, $color1 0%, $color2 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, $color1 0%, $color2 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, $color1 0%, $color2 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$color1}', endColorstr='#{$color2}',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+@mixin gradient-vertical($color1, $color2) {
+  background: -moz-linear-gradient(top, $color1 0%, $color2 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, $color1 0%, $color2 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    $color1 0%,
+    $color2 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$color1}', endColorstr='#{$color2}',GradientType=0 );
+}
+
+@mixin textfill($color1, $color2) {
+  background: -webkit-linear-gradient(top, $color1 0%, $color2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@mixin rotate($rotate) {
+  -webkit-transform: rotate(#{$rotate}deg);
+  -moz-transform: rotate(#{$rotate}deg);
+  -o-transform: rotate(#{$rotate}deg);
+  -ms-transform: rotate(#{$rotate}deg);
+  transform: rotate(#{$rotate}deg);
+}
+
+@mixin animation-delay($valu) {
+  -webkit-animation-delay: #{$valu}s;
+  animation-delay: #{$valu}s;
+}
+
+@mixin overflow {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 

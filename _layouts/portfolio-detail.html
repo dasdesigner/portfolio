@@ -5,8 +5,8 @@ layout: bone
 
 <div class="container-fuild mt100">
   <div class="container">
-    <div class="goto-back-centertop">
-      <a href="{{ site.baseurl }}/index.html"> <i class="fa fa-th-large"> </i> <span> back to home </span></a>
+    <div class="goto-back-centertop my-5">
+      <a href="{{ site.baseurl }}/index.html"> <i class="fa fa-th-large"> </i> <span> Back to Home </span></a>
     </div>
     <div class="portfolio_page_header">
       <div class="main_tag"> {{ page.subname }} </div>
@@ -20,36 +20,38 @@ layout: bone
     {{ content }}
   </div>
 
-  <div class="container wide-container">
+  <div class="wide__pagination">
     <div class="PageNavigation d-flex align-items-center justify-content-between">
       {% if page.previous.url %}
-      <div class="nav_box">
+      <div class="nav_box prev">
         <div class="img" style="background-image: url({{site.baseurl}}/images/{{ page.previous.thumb-img }}.jpg)">
         </div>
         <div class="inner">
-          <div class="tag"> Previous </div>
-          <h4> {{page.previous.title}} </h4>
-          <p> {{page.previous.subname}} </p>
+          <a href="{{page.previous.url}}">
+            <div class="tag"> Previous </div>
+            <h4> {{page.previous.title}} </h4>
+            <p> {{page.previous.subname}} </p>
+          </a>
         </div>
-        <a href="{{page.previous.url}}"></a>
       </div>
       {% endif %}
-      <div class="nav_box home">
+      <!-- <div class="nav_box home">
         <div class="inner">
           <h4> go to back </h4>
           <p> www.daskrishnan.in </p>
         </div>
         <a href="{{ site.baseurl }}/index.html"></a>
-      </div>
+      </div> -->
       {% if page.next.url %}
-      <div class="nav_box">
+      <div class="nav_box next">
         <div class="img" style="background-image:url({{site.baseurl}}/images/{{ page.next.thumb-img }}.jpg)"> </div>
         <div class="inner">
-          <div class="tag"> Next </div>
-          <h4> {{page.next.title}} </h4>
-          <p> {{page.next.subname}} </p>
+          <a href="{{page.next.url}}">
+            <div class="tag"> Next </div>
+            <h4> {{page.next.title}} </h4>
+            <p> {{page.next.subname}} </p>
+          </a>
         </div>
-        <a href="{{page.next.url}}"></a>
       </div>
       {% endif %}
     </div>
