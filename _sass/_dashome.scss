@@ -1,12 +1,11 @@
 body {
   // font-family: 'K2D', sans-serif;
   font-family: "Poppins", sans-serif;
-  background-color: #666;
+  background: #282932 url(../images/bg__color.png) center -190px no-repeat fixed;
 }
 
- 
 .portfolio_wrapper {
-  width: calc( 100vw - 200px );
+  width: calc(100vw - 200px);
   margin: auto;
   margin-bottom: 100px;
   ul {
@@ -18,7 +17,6 @@ body {
     li {
       display: inline-block;
       width: 100%;
-      background-color: #ccc;
       font-size: 14px;
       color: #333;
       position: relative;
@@ -33,6 +31,7 @@ body {
       }
       img {
         max-width: 100%;
+        border-radius: 12px;
       }
     }
   }
@@ -41,8 +40,16 @@ body {
 .profile_container {
   padding-left: $head-space-v;
   padding-right: $head-space-v;
+  color: $white;
 }
 
+.container {
+  &.wide {
+    width: calc(100vw - 200px);
+    margin: auto;
+    max-width: 100%;
+  }
+}
 
 .cover {
   max-width: 1200px;
@@ -57,14 +64,26 @@ body {
   h6,
   h3 {
     font-weight: 700;
-    text-transform: uppercase;
+    // text-transform: uppercase;
+  }
+  h2 {
+    font-size: 70px;
+    margin-bottom: 10px;
+  }
+  h3 {
+    font-weight: 500;
   }
   h1 {
-    font-size: 40px;
+    font-size: 110px;
     position: relative;
     z-index: 0;
+    margin-top: -10px;
+    margin-bottom: 0;
+    span {
+      color: #ce271e;
+    }
     &:after {
-      content: "Lorem ipsum ";
+      // content: "Lorem ipsum ";
       font-size: 120px;
       position: absolute;
       left: -40px;
@@ -73,21 +92,24 @@ body {
       margin: auto;
       pointer-events: none;
       opacity: 0.05;
-      color: #000;
+      color: #eee;
       z-index: -1;
       font-weight: 800;
     }
   }
   p {
     margin-bottom: 0;
-    max-width: 50%;
+    margin-top: 15px;
+    max-width: 80%;
     position: relative;
+    color: #a0a0a0;
   }
 }
 
 .portfolio_page_header {
   text-align: center;
   padding: 60px 0px;
+  color: $white;
 }
 
 .center {
@@ -165,25 +187,71 @@ body {
     left: 0;
   }
   .nav_box {
+    -webkit-backdrop-filter: saturate(200%) blur(20px);
+    backdrop-filter: saturate(200%) blur(20px);
     position: absolute;
+    display: flex;
+    align-items: center;
+    background-color: rgba(#000, 0.35);
     .img {
-      width: 200px;
-      height: 200px;
+      width: 80px;
+      height: 80px;
       background-size: cover;
+      margin: 20px;
     }
-    .inner{
-      position: absolute;
+    .inner {
+      position: relative;
       top: 0;
-      padding: 30px;
-      a{
+      p {
+        margin-bottom: 0;
+        font-size: 14px;
+      }
+      .tag {
+        font-size: 12px;
+      }
+      h4 {
+        font-size: 18px;
+        display: block;
+        width: 100px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+      a {
         text-decoration: none;
         color: $white;
       }
     }
+    &.prev {
+      text-align: right;
+      padding-left: 20px;
+      .img {
+      }
+      h4{
+        margin-left: auto;
+      }
+    }
+    &.next {
+      padding-right: 20px;
+    }
   }
 }
 
-
-.min__height{
+.min__height {
   min-height: calc(100vh - 200px);
+}
+
+.logo {
+  color: $white;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.header_wrapper {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.menu {
+  line-height: 45px;
 }
