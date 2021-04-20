@@ -2,6 +2,9 @@ body {
   // font-family: 'K2D', sans-serif;
   font-family: "Poppins", sans-serif;
   background: #282932 url(../images/bg__color.png) center -190px no-repeat fixed;
+  @include media-breakpoint-down(lg){
+    background-size: cover;
+  }
 }
 
 .portfolio_wrapper {
@@ -80,6 +83,9 @@ body {
   h2 {
     font-size: 70px;
     margin-bottom: 10px;
+    @include media-breakpoint-down(lg){
+      font-size: 50px;
+    }
   }
   h3 {
     font-weight: 500;
@@ -90,6 +96,9 @@ body {
     z-index: 0;
     margin-top: -10px;
     margin-bottom: 0;
+    @include media-breakpoint-down(lg){
+      font-size: 80px;
+    }
     span {
       color: transparent;
       background-clip: text;
