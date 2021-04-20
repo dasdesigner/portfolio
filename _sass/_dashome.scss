@@ -8,6 +8,9 @@ body {
   width: calc(100vw - 200px);
   margin: auto;
   margin-bottom: 100px;
+  @include media-breakpoint-down(lg){
+    width: calc(100vw - 30px);
+  }
   ul {
     margin: 0;
     padding: 0;
@@ -21,6 +24,7 @@ body {
       color: #333;
       position: relative;
       overflow: hidden;
+      
 
       a {
         position: absolute;
@@ -41,6 +45,10 @@ body {
   padding-left: $head-space-v;
   padding-right: $head-space-v;
   color: $white;
+  @include media-breakpoint-down(lg){
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 
 .container {
@@ -48,6 +56,9 @@ body {
     width: calc(100vw - 200px);
     margin: auto;
     max-width: 100%;
+    @include media-breakpoint-down(lg){
+      width: calc(100vw - 30px);
+    }
   }
 }
 
