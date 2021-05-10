@@ -298,16 +298,16 @@ body {
     background-size: cover;
   }
   .bg_ovelay {
-    -webkit-backdrop-filter: saturate(200%) blur(20px);
-    backdrop-filter: saturate(200%) blur(20px);
+    -webkit-backdrop-filter: saturate(150%) blur(20px);
+    backdrop-filter: saturate(150%) blur(20px);
     background-color: rgba(#000, 0.2);
     z-index: 1;
-    top: 90px;
-    left: 90px;
-    right: 90px;
+    top: 0;
+    left: 0;
+    right: 0;
     bottom: 0px;
   }
   .bg_img {
-    opacity:1;
+    opacity:.2;
   }
 }
