@@ -23,14 +23,14 @@ title: My Portfolio - Das krishnan
     {% assign doclist = site.work | sort: 'date' %}
     <ul id="example1">
       {% for portfolio in doclist %}
-      <li class="item">
+      <li class="item skewElem">
         <img src="{{site.baseurl}}/images/thumb/{{portfolio.thumb-img}}.jpg" alt="">
         <a href="{{site.baseurl}}{{ portfolio.url }}"></a>
         <div class="overlay"></div>
       </li>
       {% endfor %}
     </ul>
-
+ 
   </div>
 
 
