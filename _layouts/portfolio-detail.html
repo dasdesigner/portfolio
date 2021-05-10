@@ -5,10 +5,10 @@ layout: bone
 
 <div class="container-fuild mt100">
   <div class="container">
-    <div class="goto-back-centertop my-5">
+    <div class="goto-back-centertop my-5 skewElem gs_reveal">
       <a href="{{ site.baseurl }}/index.html"> <i class="fa fa-th-large"> </i> <span> Back to Home </span></a>
     </div>
-    <div class="portfolio_page_header">
+    <div class="portfolio_page_header skewElem gs_reveal">
       <div class="main_tag"> {{ page.subname }} </div>
       <h1> {{ page.name }} </h1>
       <p> {{ page.description }} </p>
@@ -16,7 +16,7 @@ layout: bone
 
   </div>
 
-  <div class="container footer-space">
+  <div class="container footer-space skewElem gs_reveal">
     {{ content }}
   </div>
 
@@ -58,4 +58,9 @@ layout: bone
     </div>
   </div>
 
+</div>
+
+<div class="bg_container">
+  <div class="bg_ovelay"></div>
+  <div class="bg_img" style="background-image: url(https://images.unsplash.com/photo-1418065460487-3e41a6c84dc5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80);"></div>
 </div>
