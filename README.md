@@ -34,3 +34,5 @@ This README would normally document whatever steps are necessary to get your app
 
 * Repo owner or admin
 * Other community or team contact
+
+purgecss --css css/ec-lister.css --content *.html *.js "**/*.js" --output ec-lister.css
