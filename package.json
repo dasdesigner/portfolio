@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/dasdesigner/portfolio/issues"
   },
-  "homepage": "https://github.com/dasdesigner/portfolio#readme"
+  "homepage": "https://github.com/dasdesigner/portfolio#readme",
+  "dependencies": {
+    "browser-sync": "^2.26.14",
+    "gulp": "^4.0.2",
+    "gulp-shell": "^0.8.0"
+  }
 }
