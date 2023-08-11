@@ -37,7 +37,8 @@ body {
       }
       img {
         max-width: 100%;
-        border-radius: 12px;
+        border-radius: 0px;
+        padding: 30px;
       }
     }
   }
@@ -297,6 +298,7 @@ body {
 
 .bg_container {
   position: fixed;
+  display: none;
   top: 0;
   left: 0;
   right: 0;
