@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="114" height="23" viewBox="0 0 114 23">
+  <g id="logo-v3" transform="translate(-14801 2187)">
+    <path id="Rectangle_90" data-name="Rectangle 90" d="M0,0H23a0,0,0,0,1,0,0V8.5A11.5,11.5,0,0,1,11.5,20h0A11.5,11.5,0,0,1,0,8.5V0A0,0,0,0,1,0,0Z" transform="translate(14801 -2164) rotate(-90)" fill="#333"/>
+    <path id="Polygon_2" data-name="Polygon 2" d="M14,0,28,23H0Z" transform="translate(14837 -2187)" fill="#333"/>
+    <g id="Group_135" data-name="Group 135" transform="translate(14887 -2187)">
+      <path id="Subtraction_5" data-name="Subtraction 5" d="M22.989,12H.011C0,11.825,0,11.657,0,11.5A11.5,11.5,0,0,1,19.632,3.368,11.425,11.425,0,0,1,23,11.5c0,.165,0,.333-.011.5Z" transform="translate(5)" fill="#333"/>
+      <path id="Subtraction_6" data-name="Subtraction 6" d="M22.989,12H.011C0,11.825,0,11.657,0,11.5A11.5,11.5,0,0,1,19.632,3.368,11.425,11.425,0,0,1,23,11.5c0,.165,0,.333-.011.5Z" transform="translate(23 23) rotate(180)" fill="#333"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100;8..144,300;8..144,600&display=swap');
+@mixin font_v2 {
+    font-family: 'Roboto Flex', sans-serif;
+}
+
+
+
+.container_v3{
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.screen_v3{
+    background-image: url(../images/v3-bg.svg);
+    background-attachment: fixed;
+    background-size: 16px;
+}
+
+.v3_header_section{
+    padding-left: 95px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    h1,h2,h3,h4,h5,p{
+        color: #000;
+        @include font_v2;
+        margin: 0;
+        font-weight: 400;
+    }
+    h4{
+        font-size: 25px;
+        font-weight: 300;
+        margin-bottom: 20px;
+    }
+    h2{
+        font-size: 45px;
+        margin-bottom: 10px;
+    }
+}
+
+
+::-moz-selection { /* Code for Firefox */
+    color: #fff;
+    background: #dd1812;
+  }
+  
+  ::selection {
+    color: #fff;
+    background: #dd1812;
+  }
+  
+  .top_header_seaction_v3{
+      padding-top: 45px;
+      padding-bottom: 45px;
+  }
+
+  .portfolio_wrapper{
+      background-color: #eee;
+      a{
+          text-decoration: none;
+          color: $black;
+      }
+  }
+.logo_v3{
+    width: 100px;
+}
+
+ul.menu_section_v3{
+    margin: 0;
+    padding: 0;
+    li{
+        list-style: none;
+        display: inline-block;
+        a{
+            padding: 5px 10px;
+            text-decoration: none;
+            font-size: 14px;
+            @include font_v2;
+            font-weight: 600;
+            color: #000;
+        }
+    }
+}
+
+.portfolio_wrapper{
+    background-color: transparent;
+    ul{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li{
+            position: relative;
+        }
+    }
+}
+.text_container{
+    @extend .d-flex;
+    @extend .justify-content-between;
+    padding: 15px;
+    background: #fff;
+    .tc_left,.tc_right{
+        @extend .d-flex;
+        .tc_icon{
+            margin-right: 3px;
+        }
+        .a_year{
+            font-size: 12px;
+        }
+    }
+}
+
+.tc_icon{
+    background-image: url(../images/app-icon.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: auto 22px;
+    width: 22px;
+    height: 22px;
+    opacity: .5;
+    &.mobile{
+        background-position: 0 0;
+    }
+    &.web{
+        background-position: -22px 0;
+    }
+    &.print{
+        background-position: -44px 0;
+    }
+    &.year{
+        background-position: -66px 0;
+    }
+}
