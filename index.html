@@ -3,40 +3,10 @@ layout: bone
 alt: Weserve Online Delivery
 title: My Portfolio - Das krishnan
 ---
-<div class="min__height d-flex align-items-center">
-  <div class="container">
-    <header>
-      <div class="profile_container profile__head skewElem gs_reveal">
-        <h2> Hello. </h2>
-        <!-- <h1> I'm  <span> Das  </span> </h1> -->
-        <!-- <h3> UI/UX Designer</h3> -->
-        <p> as a designer and front end developer, I understand the peect user inteace should look good and work even beer. Alongside my clients, I uncover problems and solve them. In sho, I create bolder online experiences. </p>
-      </div> 
-    </header>
-  </div>
+
+<div class="main-wrapper">
+  <img src="https://daskrishnan.com/images/das.svg" alt="">
 </div>
 
-
-
-  <div class="portfolio_wrapper">
-
-    {% assign doclist = site.work | sort: 'date' %}
-    <ul id="example1">
-      {% for portfolio in doclist %}
-      <li class="item skewElem gs_reveal">
-        <img src="{{site.baseurl}}/images/thumb/{{portfolio.thumb-img}}.jpg" alt="">
-        <a href="{{site.baseurl}}{{ portfolio.url }}"></a>
-        <div class="overlay"></div>
-      </li>
-      {% endfor %}
-    </ul>
  
-  </div> 
-
-
-<div class="bg_container">
-  <div class="bg_ovelay"></div>
-  <div class="bg_img" style="background-image: url(https://images.unsplash.com/photo-1418065460487-3e41a6c84dc5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80);"></div>
-</div>
-
   <!-- https://www.dejan.works/ -->
