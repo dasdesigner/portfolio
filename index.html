@@ -3,49 +3,6 @@ layout: bone
 alt: Weserve Online Delivery
 title: My Portfolio - Das krishnan
 ---
- 
-  <div class="container_v3">
-    <div class="v3_header_section">
-      <h4>Hello, my name is das</h4>
-      <h2>I’m a designer and for the last </h2>
-      <h2> 8 years I have been helping startups </h2>
-      <h2>launch better digital products</h2>
-    </div>
-  </div>
-
-  <div class="portfolio_wrapper container_v3">
-
-    {% assign doclist = site.work | sort: 'date' %}
-    <ul id="example1">
-      {% for portfolio in doclist %}
-      <li class="item  gs_reveal"> <!-- "skewElem" add class on scrolling effect -->
-        {% if portfolio.mode == "out" %}
-        <img src="{{portfolio.thumb-img}}" alt="">
-        {% else %}
-        <img src="{{site.baseurl}}/images/thumb/{{portfolio.thumb-img}}.jpg" alt="">
-        {% endif %}
-        <div class="overlay"></div>
-        <a href="{{site.baseurl}}{{ portfolio.url }}">
-        <div class="text_container">
-          <div class="tc_left">
-            <div class="tc_icon {{ portfolio.type }}"> </div>
-            <div class="a_name"> {{ portfolio.name }} </div>
-          </div>
-          <div class="tc_right">
-            <div class="a_year"> 2022 </div>
-          </div>
-        </div>
-        </a>
-      </li>
-      {% endfor %}
-    </ul>
- 
-  </div> 
-
-
-<div class="bg_container">
-  <div class="bg_ovelay"></div>
-  <div class="bg_img" style="background-image: url(https://images.unsplash.com/photo-1418065460487-3e41a6c84dc5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80);"></div>
-</div>
+  
 
   <!-- https://www.dejan.works/ -->
